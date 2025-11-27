@@ -39,19 +39,38 @@ using namespace std;
 //     return 0;
 // }
 
-void palindrome(string str){
-    string rev = str;
-    reverse(rev.begin(), rev.end());
-    if(str == rev){
-        cout << "Palindrome" << endl;
-    } else {
-        cout << "Not a Palindrome" << endl;
+// void palindrome(string str){
+//     string s1 = str;
+//     reverse(s1.begin(), s1.end());
+//     if(str == s1){
+//         cout << "Palindrome" << endl;
+//     } else {
+//         cout << "Not a Palindrome" << endl;
+//     }
+// }
+// int main(){
+//     string str;
+//     cout << "Enter a string: ";
+//     cin >> str;
+//     palindrome(str);
+//     return 0;
+// }
+
+void sum(int N){
+    int total = 0;
+    int remainder = 0;
+    while (N != 0)
+    {
+        remainder = N % 10;
+        total = total + remainder;
+        N = N / 10;
     }
+    cout << total << endl;
 }
 int main(){
-    string str;
-    cout << "Enter a string: ";
-    cin >> str;
-    palindrome(str);
+    int N;
+    cout << "Enter a number: ";
+    cin >> N;
+    sum(N);
     return 0;
 }
