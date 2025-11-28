@@ -56,21 +56,21 @@ using namespace std;
 //     return 0;
 // }
 
-void sum(int N){
-    int total = 0;
-    int remainder = 0;
-    while (N != 0)
-    {
-        remainder = N % 10;
-        total = total + remainder;
-        N = N / 10;
-    }
-    cout << total << endl;
-}
-int main(){
-    int N;
-    cout << "Enter a number: ";
-    cin >> N;
-    sum(N);
-    return 0;
-}
+// void sum(int N){
+//     int total = 0;
+//     int remainder = 0;
+//     while (N != 0)
+//     {
+//         remainder = N % 10;
+//         total = total + remainder;
+//         N = N / 10;
+//     }
+//     cout << total << endl;
+// }
+// int main(){
+//     int N;
+//     cout << "Enter a number: ";
+//     cin >> N;
+//     sum(N);
+//     return 0;
+// }
