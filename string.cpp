@@ -77,10 +77,30 @@ using namespace std;
 //     return 0;    
 // }
 
+// int main(){
+//     string str;
+//     cout << "Enter a String: ";
+//     getline(cin, str);
+//     cout << "String length: " << str.length() << endl;
+//     return 0;
+// }
+
+// int main(){
+//     string str1 = "Welcome";
+//     string str2 = "Home";
+//     if ((str1.compare(str2) == 0) || (str1 == str2)) {
+//         cout << "Both strings are equal." << endl;
+//     } else {
+//         cout << "Strings are not equal." << endl;
+//     }
+//     return 0;
+// }
+
 int main(){
-    string str;
-    cout << "Enter a String: ";
-    getline(cin, str);
-    cout << "String length: " << str.length() << endl;
+    string str1 = "Hi! Welcome Home";
+    string str2 = "I am Nik";
+    cout << str1.insert(4, "Joy ") << endl;
+    cout << str1.insert(4, str2) << endl;
+    cout << str1.insert(21, ". What will you have?", 4,5) << endl;
     return 0;
 }
