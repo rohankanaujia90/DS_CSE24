@@ -1,6 +1,8 @@
 #include<iostream>
 #include<cstring>
 #include<string>
+#include<algorithm>
+#include<cctype>
 using namespace std;
 // int main (){
 //     char greeting[6] = {'H' , 'e', 'l', 'l', 'o', '\0'};
@@ -96,11 +98,73 @@ using namespace std;
 //     return 0;
 // }
 
+// int main(){
+//     string str1 = "Hi! Welcome Home";
+//     string str2 = "I am Nik";
+//     cout << str1.insert(4, "Joy ") << endl;
+//     cout << str1.insert(4, str2) << endl;
+//     cout << str1.insert(21, ". What will you have?", 4,5) << endl;
+//     return 0;
+
+// }
+
+// right rotation
+// int main() {
+//     string s2 = "Rishika chachundari";
+//     string rotateds;
+//     int k = 3;
+//     cout<<"Original:"<<s2<<endl;
+//     int n = s2.length();
+//     k=k%n;
+//     if(k==0){
+//         rotateds = s2;
+        
+//     }
+//     else{
+//         rotateds = s2.substr(n-k) + s2.substr(0,n-k);
+//     }
+//     cout<<"rotated string is : "<< rotateds;
+// }
+
+//left rotation
+// int main() {
+//     string s2 = "Rishika chachundari";
+//     string rotateds;
+//     int k = 3;
+//     cout << "Original: " << s2 << endl;
+//     int n = s2.length();
+//     k = k % n;
+//     if (k == 0) {
+//         rotateds = s2;
+//     } else {
+//         rotateds = s2.substr(k) + s2.substr(0, k);
+//     }
+//     cout << "Rotated string is: " << rotateds << endl;
+//     return 0;
+// }
+
 int main(){
-    string str1 = "Hi! Welcome Home";
-    string str2 = "I am Nik";
-    cout << str1.insert(4, "Joy ") << endl;
-    cout << str1.insert(4, str2) << endl;
-    cout << str1.insert(21, ". What will you have?", 4,5) << endl;
+    string s, n;
+    cout << "Enter a string: ";
+    getline(cin, s);
+
+    int begin = 0;
+    int end = s.length() - 1;
+    while (begin < end ){
+        while (begin < end && !isalnum(s[begin])) {
+            begin++;
+        }
+        while (begin < end && !isalnum(s[end])) {
+            end--;
+        }
+        if (tolower(s[begin]) != tolower(s[end])) {
+            cout << "The string is not a palindrome." << endl;
+            return 0;
+        }
+        begin++;
+        end--;
+
+    }
+    cout << "The string is a palindrome." << endl;
     return 0;
 }
