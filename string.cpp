@@ -42,16 +42,37 @@ using namespace std;
     
 // }
 
-int main(){
-   char str1[20];
-   char str2[20];
-   cout << "Enter 1st String: ";
-   cin >> str1;
-   cout << "Enter 2nd String: ";
-   cin >> str2;
-   strcat(str1, " ");
-   strcat(str1, str2);
-   cout << str1;
-   return 0;
+// int main(){
+//    char str1[20];
+//    char str2[20];
+//    cout << "Enter 1st String: ";
+//    cin >> str1;
+//    cout << "Enter 2nd String: ";
+//    cin >> str2;
+//    strcat(str1, " ");
+//    strcat(str1, str2);
+//    cout << str1;
+//    return 0;
 
+// }
+
+// int main(){
+//     string str1, str3, str2;
+//     cout << "Enter 1st String: ";
+//     getline(cin, str1);
+//     cout << "Enter 2nd String: ";
+//     getline(cin, str2);
+//     str3 = str1 + " " + str2; 
+//     cout << str3 << endl;
+//     return 0;
+// }
+
+int main(){
+    string str1 = {"hello"};
+    string str2 = {"joy"};
+    string str3 (str2);
+    string str4 (5, 'a');
+    cout<<str1 << endl<< str2 << endl
+        << str3 << endl << str4 << endl;
+    return 0;    
 }
