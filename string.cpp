@@ -67,12 +67,20 @@ using namespace std;
 //     return 0;
 // }
 
+// int main(){
+//     string str1 = {"hello"};
+//     string str2 = {"joy"};
+//     string str3 (str2);
+//     string str4 (5, 'a');
+//     cout<<str1 << endl<< str2 << endl
+//         << str3 << endl << str4 << endl;
+//     return 0;    
+// }
+
 int main(){
-    string str1 = {"hello"};
-    string str2 = {"joy"};
-    string str3 (str2);
-    string str4 (5, 'a');
-    cout<<str1 << endl<< str2 << endl
-        << str3 << endl << str4 << endl;
-    return 0;    
+    string str;
+    cout << "Enter a String: ";
+    getline(cin, str);
+    cout << "String length: " << str.length() << endl;
+    return 0;
 }
