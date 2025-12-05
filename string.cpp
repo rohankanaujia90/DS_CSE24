@@ -1,8 +1,4 @@
-#include<iostream>
-#include<cstring>
-#include<string>
-#include<algorithm>
-#include<cctype>
+#include <bits/stdc++.h>
 using namespace std;
 // int main (){
 //     char greeting[6] = {'H' , 'e', 'l', 'l', 'o', '\0'};
@@ -143,28 +139,90 @@ using namespace std;
 //     return 0;
 // }
 
+// int main(){
+//     string s, n;
+//     cout << "Enter a string: ";
+//     getline(cin, s);
+
+//     int begin = 0;
+//     int end = s.length() - 1;
+//     while (begin < end ){
+//         while (begin < end && !isalnum(s[begin])) {
+//             begin++;
+//         }
+//         while (begin < end && !isalnum(s[end])) {
+//             end--;
+//         }
+//         if (tolower(s[begin]) != tolower(s[end])) {
+//             cout << "The string is not a palindrome." << endl;
+//             return 0;
+//         }
+//         begin++;
+//         end--;
+
+//     }
+//     cout << "The string is a palindrome." << endl;
+//     return 0;
+// }
+
+//erase characters from string
+// int main(){
+//     string str;
+//     cout << "Enter a string: ";
+//     getline (cin, str);
+//     cout << "Original String: " << str << endl;
+//     str.erase(5, 3); //erases 3 characters from index 5
+//     cout << "String after erasing characters: " << str << endl;
+//     return 0;
+// }
+
+// count vowels and consonants in a string
+// int main(){
+//     string str;
+//     int vowels = 0, constants = 0;
+//     cout << "Enter a string: ";
+//     getline(cin, str);
+//     for (char c : str){
+//         c = tolower(c);
+//         if (isalpha(c)){
+//             if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u'){
+//                 vowels++;
+//             } else {
+//                 constants++;
+//             }
+//         }
+//     }
+//     cout << "Number of vowels: " << vowels << endl;
+//     cout << "Number of consonants: " << constants << endl;
+//     return 0;
+// }
+
+//capitalize first letter of each word in a string
+// int main(){
+//     string str;
+//     cout << "Enter a string: ";
+//     getline(cin, str);
+//     bool capitalize = true;
+//     for (size_t i = 0; i < str.length(); i++){
+//         if (isspace(str[i])){
+//             capitalize = true;
+//         } else if (capitalize && isalpha(str[i])){
+//             str[i] = toupper(str[i]);
+//             capitalize = false;
+//         } else {
+//             str[i] = tolower(str[i]);
+//         }
+//     }
+//     cout << "Capitalized String: " << str << endl;
+//     return 0;
+// }
+
+//shorting name
 int main(){
-    string s, n;
-    cout << "Enter a string: ";
-    getline(cin, s);
-
-    int begin = 0;
-    int end = s.length() - 1;
-    while (begin < end ){
-        while (begin < end && !isalnum(s[begin])) {
-            begin++;
-        }
-        while (begin < end && !isalnum(s[end])) {
-            end--;
-        }
-        if (tolower(s[begin]) != tolower(s[end])) {
-            cout << "The string is not a palindrome." << endl;
-            return 0;
-        }
-        begin++;
-        end--;
-
-    }
-    cout << "The string is a palindrome." << endl;
+    string str1, str2;
+    cout << "Ennter Your Name: ";
+    getline(cin, str1);
+    sort(str1.begin(), str1.end());
+    cout << "Sorted Name: " << str1 << endl;
     return 0;
 }
